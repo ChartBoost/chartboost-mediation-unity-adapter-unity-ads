@@ -2,7 +2,7 @@
 <dependencies>
     <androidPackages>
         <!-- Android Adapter -->
-        <androidPackage spec="com.chartboost:chartboost-mediation-adapter-unity-ads:5.4.15.+"/>
+        <androidPackage spec="com.chartboost:chartboost-mediation-adapter-unity-ads:5.4.16.+"/>
     </androidPackages>
     <iosPods>
         <!-- iOS Adapter -->
