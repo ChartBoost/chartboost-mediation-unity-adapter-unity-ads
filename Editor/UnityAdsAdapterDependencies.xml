@@ -6,9 +6,9 @@
     </androidPackages>
     <iosPods>
         <!-- iOS Adapter -->
-        <iosPod name="ChartboostMediationAdapterUnityAds" version="~> 5.4.17.0"/>
+        <iosPod name="ChartboostMediationAdapterUnityAds" version="~> 5.4.18.0"/>
 
         <!-- Partner iOS SDK-->
-        <iosPod name="UnityAds" version="~> 4.17.0" addToAllTargets="false"/>
+        <iosPod name="UnityAds" version="~> 4.18.0" addToAllTargets="false"/>
     </iosPods>
 </dependencies>
