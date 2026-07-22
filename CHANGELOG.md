@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file using the standards as defined at [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0).
 
+### Version 5.0.10 *(2026-07-08)*
+This version of the Unity Ads Adapter supports the following native SDK dependencies:
+  * Android: `com.chartboost:chartboost-mediation-adapter-unity-ads:5.4.19.+`
+  * iOS: `ChartboostMediationAdapterUnityAds: ~> 5.4.18.0`
+
 ### Version 5.0.9 *(2026-06-01)*
 This version of the Unity Ads Adapter supports the following native SDK dependencies:
   * Android: `com.chartboost:chartboost-mediation-adapter-unity-ads:5.4.18.+`
