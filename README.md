@@ -12,7 +12,7 @@ In order to add the Chartboost Mediation Unity SDK - UnityAds Adapter to your pr
 
 ```json
 "dependencies": {
-    "com.chartboost.mediation.unity.adapter.unity-ads": "5.0.10",
+    "com.chartboost.mediation.unity.adapter.unity-ads": "5.0.11",
     ...
 },
 "scopedRegistries": [
