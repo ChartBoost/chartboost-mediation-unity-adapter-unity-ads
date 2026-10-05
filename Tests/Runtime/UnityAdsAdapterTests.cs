@@ -1,16 +1,13 @@
-using Chartboost.Logging;
 using Chartboost.Mediation.UnityAds;
 using Chartboost.Tests.Runtime;
 using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
 
 namespace Chartboost.Tests
 {
-    internal class UnityAdsAdapterTests
+    internal class UnityAdsAdapterTests : DebugLogLevelFixture
     {
-        [SetUp]
-        public void SetUp()
-            => LogController.LoggingLevel = LogLevel.Debug;
-
         [Test]
         public void AdapterNativeVersion()
             => TestUtilities.TestStringGetter(() => UnityAdsAdapter.AdapterNativeVersion);
@@ -31,20 +28,21 @@ namespace Chartboost.Tests
         public void TestMode()
             => TestUtilities.TestBooleanAccessor(() => UnityAdsAdapter.TestMode, value => UnityAdsAdapter.TestMode = value);
 
-        [Test, Order(0)]
-        public void SetGDPRConsentTrue() 
-            => UnityAdsAdapter.SetGDPRConsentOverride(true);
-        
-        [Test, Order(1)]
-        public void SetGDPRConsentFalse() 
-            => UnityAdsAdapter.SetGDPRConsentOverride(false);
-        
-        [Test, Order(0)]
-        public void SetPrivacyConsentTrue() 
-            => UnityAdsAdapter.SetPrivacyConsentOverride(true);
-        
-        [Test, Order(1)]
-        public void SetPrivacyConsentFalse() 
-            => UnityAdsAdapter.SetPrivacyConsentOverride(false);
+        // The Editor uses UnityAdsDefault, which only logs; HB-12134 logged the wrong method name.
+        [TestCase(true), TestCase(false)]
+        public void SetGDPRConsentOverrideLogsItsName(bool value)
+        {
+            if (!Application.isEditor) Assert.Ignore("The Default implementation only runs in the Editor.");
+            LogAssert.Expect(LogType.Log, "SetGDPRConsentOverride does nothing on UnityAdsDefault");
+            UnityAdsAdapter.SetGDPRConsentOverride(value);
+        }
+
+        [TestCase(true), TestCase(false)]
+        public void SetPrivacyConsentOverrideLogsItsName(bool value)
+        {
+            if (!Application.isEditor) Assert.Ignore("The Default implementation only runs in the Editor.");
+            LogAssert.Expect(LogType.Log, "SetPrivacyConsentOverride does nothing on UnityAdsDefault");
+            UnityAdsAdapter.SetPrivacyConsentOverride(value);
+        }
     }
 }

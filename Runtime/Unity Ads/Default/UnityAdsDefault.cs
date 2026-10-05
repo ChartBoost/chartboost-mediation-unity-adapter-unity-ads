@@ -26,6 +26,6 @@ namespace Chartboost.Mediation.UnityAds.Default
 
         /// <inheritdoc/>
         public void SetPrivacyConsentOverride(bool consentStatus)
-            => LogController.Log($"{nameof(SetGDPRConsentOverride)} does nothing on {nameof(UnityAdsDefault)}", LogLevel.Info);
+            => LogController.Log($"{nameof(SetPrivacyConsentOverride)} does nothing on {nameof(UnityAdsDefault)}", LogLevel.Info);
     }
 }
