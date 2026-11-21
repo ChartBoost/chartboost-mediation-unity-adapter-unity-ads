@@ -1,6 +1,6 @@
 {
     "name": "com.chartboost.mediation.unity.adapter.unity-ads",
-    "version": "5.0.15",
+    "version": "5.0.16",
     "license": "MIT",
     "displayName": "Chartboost Mediation Adapter - Unity Ads",
     "description": "The Chartboost Mediation Unity SDK Adapter for Unity Ads.",
@@ -11,7 +11,7 @@
     "dependencies": {
         "com.chartboost.mediation": "5.0.0",
         "com.chartboost.unity.threading": "1.0.1",
-        "com.chartboost.unity.utilities": "1.0.1",
+        "com.chartboost.unity.utilities": "2.0.0",
         "com.chartboost.unity.logging": "1.0.0"
     },
     "keywords": [
